@@ -20,8 +20,6 @@ namespace Skill_Calculator
         {
             Console.WriteLine("Herblore Potion Calculator! /n");
 
-            highscores.getXP(username);
-
             printTable(username, xpneeded, bonusXp, xpMultiplier);
 
         }

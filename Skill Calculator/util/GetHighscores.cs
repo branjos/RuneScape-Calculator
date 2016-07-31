@@ -68,6 +68,7 @@ namespace Skill_Calculator
                 //{                       
                 //    Console.WriteLine(list);
                 //}
+                //Console.ReadKey();
 
             }
             catch (WebException ex)
@@ -94,11 +95,11 @@ namespace Skill_Calculator
         {
 
             int experience = 0;
-            int ex = 0;
 
             if (skill == "herblore")
             {
                 experience = stats[50];
+                Console.WriteLine(stats[50]);
             }
             if (skill == "prayer")
             {
@@ -141,7 +142,7 @@ namespace Skill_Calculator
             return xpNeeded;
         }
 
-        public double getExpNeeded(int desiredLevel, int skillxp)
+        /*public double getExpNeeded(int desiredLevel, int skillxp)
         {
             double xpNeeded = 0;
 
@@ -149,6 +150,7 @@ namespace Skill_Calculator
 
             return xpNeeded;
         }
+        */
 
         //Returns total xp needed
         public int getLevelXp(int level)
