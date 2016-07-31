@@ -1,0 +1,6 @@
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\bin\Release\Skill Calculator.exe.config
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\bin\Release\Skill Calculator.exe
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\bin\Release\Skill Calculator.pdb
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\obj\Release\Skill Calculator.exe
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\obj\Release\Skill Calculator.pdb
+c:\users\bran\documents\visual studio 2015\Projects\Skill Calculator\Skill Calculator\obj\Release\Skill Calculator.csprojResolveAssemblyReference.cache
