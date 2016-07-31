@@ -72,35 +72,45 @@ namespace Skill_Calculator
             bool correct = false; //bool for loops to get user information
             GetHighscores highscores = new GetHighscores();
             //get username
-            Console.Clear();
-            Console.WriteLine("Please enter your username: ");
-            Console.WriteLine("If your herblore level is below 35 or you want to enter your experinece, hit enter");
-            username = Console.ReadLine();
 
-            
-            /*if(username == "")
+            while (!correct)
             {
                 Console.Clear();
-                Console.WriteLine("Please enter your herblore experience:");
-                skillxp = Int32.Parse(Console.ReadLine());
-                xpNeeded = highscores.getExpNeeded(desiredLevel, skillxp);
+                Console.WriteLine("Please enter your username: ");
+                Console.WriteLine("If your herblore level is below 35 or you want to enter your experinece, hit enter");
+                username = Console.ReadLine();
+
+                if (username == "")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Please enter your herblore experience:");
+                    skillxp = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Your herblore skill xp is: " + skillxp + ", is that correct(y/n)");
+                    if(Console.ReadLine() == "y")
+                    {
+                        correct = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Your username is " + username + ", is that correct(y/n)?");
+                    if(Console.ReadLine() == "y")
+                    {
+                        correct = true;
+                    }
+                }
             }
-            else
-            {
-                highscores.getXP(username);
-                xpNeeded = highscores.getExpNeeded(desiredLevel, "herblore", username);   
-            }
-            */
 
             //get desired level
-            while (correct != true)
+            correct = false;
+            while (!correct)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter herblore level desired: ");
                 desiredLevel = Int32.Parse(Console.ReadLine());
                 if (desiredLevel >= 2 && desiredLevel <= 120)
                 {
-                    xpNeeded = highscores.getExpNeeded(desiredLevel, "herblore", username);
                     correct = true;
                 }
                 else
@@ -111,9 +121,18 @@ namespace Skill_Calculator
                 }
             }
 
+            if(skillxp > 0)
+            {
+                xpNeeded = highscores.getExpNeeded(desiredLevel, skillxp);
+            }
+            else
+            {
+                xpNeeded = highscores.getExpNeeded(desiredLevel, "herblore", username);
+            }
+
             //get bonus xp
             correct = false;
-            while(correct != true)
+            while(!correct)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter your bonus xp: ");
@@ -134,7 +153,7 @@ namespace Skill_Calculator
             //get multiplier
             correct = false;
 
-            while(correct != true)
+            while(!correct)
             {
                 Console.Clear();
                 Console.WriteLine("Please enter your boost as a DECIMAL");

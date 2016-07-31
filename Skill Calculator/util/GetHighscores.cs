@@ -142,7 +142,8 @@ namespace Skill_Calculator
             return xpNeeded;
         }
 
-        /*public double getExpNeeded(int desiredLevel, int skillxp)
+        //This method is the same as above, but takes a skill xp parameter instead of looking up users highscores
+        public double getExpNeeded(int desiredLevel, int skillxp)
         {
             double xpNeeded = 0;
 
@@ -150,7 +151,7 @@ namespace Skill_Calculator
 
             return xpNeeded;
         }
-        */
+        
 
         //Returns total xp needed
         public int getLevelXp(int level)
