@@ -66,7 +66,7 @@ namespace Skill_Calculator.util
 
             line = sb.ToString();
             Console.WriteLine(line);
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(13000);
         }
 
         public void printFooter()
